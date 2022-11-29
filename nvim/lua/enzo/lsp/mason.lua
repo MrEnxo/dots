@@ -8,6 +8,10 @@ local servers = {
 }
 
 local settings = {
+    providers = {
+        "mason.providers.client",
+        "mason.providers.registry-api",
+    },
 	ui = {
 		border = "none",
 		icons = {

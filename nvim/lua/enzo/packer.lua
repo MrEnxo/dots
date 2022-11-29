@@ -2,8 +2,21 @@
 
 vim.cmd [[packadd packer.nvim]]
 
+local packer = require('packer')
 
-return require('packer').startup(function() 
+
+
+packer.init({
+	display = {
+		open_fn = function()
+			return require("packer.util").float({ border = "rounded" })
+		end,
+	},
+})
+
+
+return packer.startup(function() 
+    use "nvim-lua/plenary.nvim"
 	use 'wbthomason/packer.nvim'
 	use 'catppuccin/nvim'
 	use 'lambdalisue/suda.vim'
@@ -19,8 +32,12 @@ return require('packer').startup(function()
     use {'nvim-orgmode/orgmode', config = function()
       require('orgmode').setup{}
     end}
-
-
+    use "hrsh7th/cmp-nvim-lsp"
+    use "hrsh7th/cmp-nvim-lua"
+    use "neovim/nvim-lspconfig" -- enable LSP
+    use "williamboman/mason.nvim" -- simple to use language server installer
+    use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
+    use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 	use {
 	  'nvim-tree/nvim-tree.lua',
