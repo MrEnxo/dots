@@ -17,6 +17,16 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
+
+#waybar > box:nth-child(2) > box:nth-child(3) > *:not(:first-child) > label {
+  background-image:
+    linear-gradient(#ffffff, #ffffff 45%, #ffffff 55%, #ffffff)
+  ;
+  background-size: 2px 50%;
+  background-position:0 50%;
+  background-repeat:no-repeat;
+}
+
 /*
 window#waybar.empty {
     background-color: transparent;
@@ -130,17 +140,17 @@ label:focus {
     background-color: #000000;
 }
 .modules-left {
-    background-color:#313244;
+    background-color: rgba(30, 30, 46, 0.7);
     padding: 4px 20px;
     border-radius: 10px;
 }
 .modules-center {
-    background-color:#313244;
+    background-color: rgba(30, 30, 46, 0.6);
     padding: 4px 20px;
     border-radius: 10px;
 }
 .modules-right {
-    background-color:#313244;
+    background-color: rgba(30, 30, 46, 0.6);
     padding: 4px 20px;
     border-radius: 10px;
 }
