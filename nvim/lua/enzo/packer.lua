@@ -16,6 +16,11 @@ return require('packer').startup(function()
 	use 'saadparwaiz1/cmp_luasnip'
 	use 'L3MON4D3/LuaSnip'
 	use 'rafamadriz/friendly-snippets'
+    use {'nvim-orgmode/orgmode', config = function()
+      require('orgmode').setup{}
+    end}
+
+
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 	use {
 	  'nvim-tree/nvim-tree.lua',
