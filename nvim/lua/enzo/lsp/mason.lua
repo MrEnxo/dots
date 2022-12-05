@@ -5,6 +5,9 @@ local servers = {
 	"jdtls",
 	"kotlin_language_server",
 	"gradle_ls",
+    "tsserver",
+    "clangd",
+    "rust_analyzer",
 }
 
 local settings = {
